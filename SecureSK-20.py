@@ -6,8 +6,6 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 import os
 import getpass
-import requests
-import json
 from colorama import init, Fore, Style
 import zlib
 import base64
@@ -275,6 +273,39 @@ def show_help(option):
     }
     print(f"{Fore.CYAN}Help: {helps.get(option, 'No help available for this option.')}{Style.RESET_ALL}")
 
+def handle_hashing(password, salt, algorithm):
+    if algorithm == 'MD5':
+        return generate_md5(password, salt)
+    elif algorithm == 'SHA-1':
+        return generate_sha1(password, salt)
+    elif algorithm == 'SHA-224':
+        return generate_sha224(password, salt)
+    elif algorithm == 'SHA-256':
+        return generate_sha256(password, salt)
+    elif algorithm == 'SHA-384':
+        return generate_sha384(password, salt)
+    elif algorithm == 'SHA-512':
+        return generate_sha512(password, salt)
+    elif algorithm == 'SHA3-256':
+        return generate_sha3_256(password, salt)
+    elif algorithm == 'BLAKE2b':
+        return generate_blake2b(password, salt)
+    elif algorithm == 'BLAKE2s':
+        return generate_blake2s(password, salt)
+    elif algorithm == 'CRC32':
+        return generate_crc32(password, salt)
+    elif algorithm == 'NTLM':
+        return generate_ntlm(password)
+    elif algorithm == 'HMAC':
+        # HMAC needs a key, handled separately in your menu
+        return "HMAC requires a key, handled separately."
+    elif algorithm == 'PBKDF2':
+        return generate_pbkdf2(password, salt)
+    elif algorithm == 'Scrypt':
+        return generate_scrypt(password, salt)
+    else:
+        return "Unknown algorithm"
+
 def main():
     print(BANNER)
     salt = generate_salt()
@@ -284,7 +315,7 @@ def main():
         choice = input(f"\n{Fore.CYAN}Enter your choice (1-34): {Style.RESET_ALL}")
         try:
             show_help(choice)
-            password_options = {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33"}
+            password_options = {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","17","18","20","21","22","23","24","25","26","27","28","29","30","31","32","33"}
             if choice in password_options:
                 password = getpass.getpass(f"{Fore.YELLOW}Enter password/plaintext: {Style.RESET_ALL}")
             if choice == "1":
