@@ -1,0 +1,4 @@
+pycryptodome
+colorama
+requests
+argon2-cffi
