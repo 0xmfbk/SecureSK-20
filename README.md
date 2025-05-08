@@ -23,32 +23,27 @@
    git clone https://github.com/yourusername/SecureSK-20.git
    cd SecureSK-20
    ```
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
 
-## 🧪 Using a Python Virtual Environment
-
-It is recommended to use a Python virtual environment to avoid conflicts with system packages and keep dependencies isolated.
-
-1. **Create a virtual environment:**
-   ```bash
-   python3 -m venv venv
-   ```
-2. **Activate the virtual environment:**
-   - On **Windows**:
+2. **(Recommended) Create and activate a Python virtual environment:**
+   - Create a virtual environment:
      ```bash
-     venv\Scripts\activate
+     python3 -m venv venv
      ```
-   - On **macOS/Linux**:
-     ```bash
-     source venv/bin/activate
-     ```
+   - Activate the virtual environment:
+     - On **Windows**:
+       ```bash
+       venv\Scripts\activate
+       ```
+     - On **macOS/Linux**:
+       ```bash
+       source venv/bin/activate
+       ```
+
 3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
+
 4. **Run the tool:**
    ```bash
    python SecureSK-20.py
