@@ -1,3 +1,5 @@
+![SecureSK-20 Banner](https://github.com/0xmfbk/SecureSK-20/img.png)
+
 # SecureSK-20 🔐
 
 **SecureSK-20** is your all-in-one, modern terminal toolkit for secure password hashing, encryption, decryption, and file integrity. Fast, flexible, and perfect for cybersecurity, IT, and privacy enthusiasts! 🚀
