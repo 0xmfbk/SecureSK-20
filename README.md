@@ -1,4 +1,4 @@
-![SecureSK-20 Banner]([https://github.com/0xmfbk/SecureSK-20/img.pn](https://github.com/0xmfbk/SecureSK-20/blob/main/img.png))
+![SecureSK-20 Banner]([https://github.com/0xmfbk/SecureSK-20/img.pn])
 
 # SecureSK-20 🔐
 
